@@ -1,11 +1,15 @@
-import logo from "./logo.svg";
+
 import "./App.css";
-import Nav from "./Components/Nav";
+import Header from "./Components/Layout/Header";
+import Skills from "./Components/Skills";
+
 
 function App() {
   return (
     <div className="App">
-      <Nav />
+      
+      <Header/>
+      <Skills/>
     </div>
   );
 }

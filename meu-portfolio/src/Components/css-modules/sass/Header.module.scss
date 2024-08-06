@@ -1,0 +1,78 @@
+@import url(https://db.onlinewebfonts.com/c/23c0fcab84d99da0de762de7e220a6e1?family=Europa+Regular);
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+header {
+    display: flex;
+    flex-direction: column;
+    background: url('../../../public/img/workfundo.jpg') no-repeat center;
+    background-size: cover;
+    border-image: fill 0 linear-gradient(#00000000,#0000001b,#0000003f,#000);
+    height: 750px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 50px 0;
+}
+
+.downloadBtn {
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #ffffff;
+    width: 140px;
+    font-size: 1em;
+    font-weight: 700;
+    height: 40px;
+    
+
+    &:hover{
+        background-color: #fff;
+        color: #0c0c0c;
+        transition: .6s;
+    }
+}
+
+
+.Links {
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    
+    a{
+        text-decoration: none;
+        font: 500 20px "Europa Regular", sans-serif;
+        color: #ffffff;
+        text-shadow:-5px 1px 5px #00000056;
+
+        &:hover{
+            color:#FFFEF1;
+            text-shadow: 1px 1px 10px #fff;
+            transition: .2s;
+        }
+    }
+
+}
+
+.Presentation {
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    text-shadow: 1px 10px 40px #00000056;
+    cursor: pointer;
+    h1{
+        font-size: 80px;
+        letter-spacing: 10px;
+    }
+    h3{
+        color: #f6f6f6;
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+}
+
