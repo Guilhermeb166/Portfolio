@@ -42,6 +42,7 @@ function Skills(){
             
                 <h1>Skills</h1>
                 <div ref={skillsRef} className={`${styles.cards} ${styles.hidden} `}>
+                    <div className={styles.fundo}></div>
                     <div className={styles.item}>
                         <p>HTML5</p>
                         <FaHtml5 className={styles.icon}/>
