@@ -1,0 +1,97 @@
+.allProjects_cards {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000000bd;
+    display: block;
+    position: absolute;
+}
+
+.box:hover::before,
+.box:hover .details {
+    opacity: 0;
+}
+
+.box {
+    width: 413px;
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+}
+
+
+.card_details {
+    width: 100%;
+    height: 100%;
+    ;
+}
+
+.card_details>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.2em 1.2em 0 0;
+}
+
+.details {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-weight: 700;
+    width: 100%;
+    font-size: 1.5em;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.details>p>svg {
+    color: #66bbd3;
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+.description_wrapper {
+    position: absolute;
+    top: 80%;
+    opacity: 0;
+    width: 100%;
+    background-color: #0C0C0F;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0 0 1.2em 1.2em;
+}
+
+.box:hover .description_wrapper {
+
+    opacity: 1;
+    top: 100%;
+    transition: all .3s ease-in;
+}
+.description_wrapper button{
+    border: 1px solid #66bbd3;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+.description_wrapper button:hover{
+    background-color: #66bbd3;
+    transition: all .6s;
+    color: #000;
+}

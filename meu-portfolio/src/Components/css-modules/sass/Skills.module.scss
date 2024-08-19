@@ -16,6 +16,7 @@ $azul:#66d9ed;
     background-color: black;
     height: 800px;
     display: flex;
+    z-index: 999;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -36,6 +37,7 @@ $azul:#66d9ed;
         display: flex;
         gap: 60px;
         width: 60%;
+        z-index: 999;
 
         .fundo{
             position: absolute;

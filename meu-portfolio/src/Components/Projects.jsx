@@ -1,6 +1,7 @@
 import styles from './css-modules/Projects.module.css'
 import { useEffect, useRef } from 'react';
 import Highlights from './Projects/Highlights/Highlights'
+import AllProjects from './Projects/All/AllProjects';
 function Projects() {
 
     const projectsRef = useRef(null);
@@ -44,6 +45,7 @@ function Projects() {
                 </div>
                 <div className={styles.all_projects}>
                     <h1 className={styles.title}>Todos os projetos</h1>
+                    <AllProjects/>
                 </div>
             </div>
         </section>

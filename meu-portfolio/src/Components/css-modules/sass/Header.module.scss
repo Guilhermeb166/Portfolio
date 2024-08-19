@@ -15,7 +15,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 25px 50px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    
 }
 
 .downloadBtn {
@@ -29,6 +35,8 @@ nav {
     font-size: 1em;
     font-weight: 700;
     height: 40px;
+    z-index: 1000;
+    margin-left: 20px;
     
     &:hover{
         background-color: #fff;
@@ -45,15 +53,17 @@ nav {
     align-items: center;
     
     p{
-        a{
+        span{
             text-decoration: none;
             font: 500 20px "Europa Regular", sans-serif;
             color: #ffffff;
-            text-shadow:-5px 1px 5px #00000056;
+            text-shadow:3px 1px 1px #000000;
+            cursor: pointer;
+            letter-spacing: 2px;
 
             &:hover{
                 color: #66d9ed;
-                text-shadow:1px 1px 5px #000000e2;
+                text-shadow:1px 1px 1px #02020298;
             }
         }
        &:hover{

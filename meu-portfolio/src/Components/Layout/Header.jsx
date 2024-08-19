@@ -1,7 +1,8 @@
 import styles from "../css-modules/Header.module.css";
+import { Link } from "react-router-dom"
 function Header() {
 
-  function Download(){
+  function Download() {
     const link = document.createElement('a')
     link.href = './CurrículoFront-end - Guilherme Barroso.pdf';
     link.download = 'currículoguilhermebarroso.pdf';
@@ -9,25 +10,31 @@ function Header() {
     link.click();
     document.body.removeChild(link);
   }
-  
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <header>
       <nav>
         <button id="downloadBtn" className={styles.downloadBtn} onClick={Download}>Download CV</button>
         <div className={styles.Links}>
-          <p><a href="" >Home</a></p>
-          <p><a href="" >Meus Projetos</a></p>
-          <p><a href="" >Contato</a></p>
-          <p><a href="" >Sobre mim</a></p>
+          <p><span onClick={() => scrollToSection('Header')}>Home</span></p>
+          <p><span onClick={() => scrollToSection('projects')}>Meus Projetos</span></p>
+          <p><span onClick={() => scrollToSection('contato')}>Contato</span></p>
+          <p><span onClick={() => scrollToSection('skills')}>Skills</span></p>
         </div>
       </nav>
-        <div className={styles.Presentation}>
-          <h1>Guilherme Barroso</h1>
-          <h3>Front end Developer</h3>
-        </div>
-        
+      <div className={styles.Presentation}>
+        <h1>Guilherme Barroso</h1>
+        <h3>Front end Developer</h3>
+      </div>
+
     </header>
-    
+
   );
 }
 
