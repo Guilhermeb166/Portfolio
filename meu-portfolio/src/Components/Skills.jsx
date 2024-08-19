@@ -70,7 +70,6 @@ function Skills(){
                         <FaFigma className={styles.icon}/>
                         <p className={styles.barra}></p>
                     </div>
-                    
                 </div>
             
        </section>

@@ -1,4 +1,16 @@
 @import url(https://db.onlinewebfonts.com/c/23c0fcab84d99da0de762de7e220a6e1?family=Europa+Regular);
+.hidden {
+  opacity: 0;
+  transition: all 0s;
+  transform: translateX(-20%);
+}
+
+.show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateX(0);
+}
+
 .Container {
   width: 100%;
   background-color: #000;
@@ -38,7 +50,6 @@
 }
 
 .highlights {
-  border: 1px solid #fff;
   height: 450px;
   width: 90%;
   display: flex;
@@ -47,7 +58,6 @@
 }
 
 .all_projects {
-  border: 1px solid #fff;
   height: 500px;
   width: 90%;
 }/*# sourceMappingURL=Projects.module.css.map */
