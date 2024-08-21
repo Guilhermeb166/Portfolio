@@ -1,8 +1,17 @@
 .allProjects_cards {
     display: flex;
-    height: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
     justify-content: space-between;
     width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000a3;
 }
 
 .box::before {
@@ -24,6 +33,7 @@
     height: 300px;
     cursor: pointer;
     position: relative;
+    margin-bottom: 80px;
 }
 
 .box:hover {
@@ -82,7 +92,8 @@
     top: 100%;
     transition: all .3s ease-in;
 }
-.description_wrapper button{
+
+.description_wrapper button {
     border: 1px solid #66bbd3;
     background-color: transparent;
     color: #fff;
@@ -90,7 +101,8 @@
     cursor: pointer;
     padding: 5px 15px;
 }
-.description_wrapper button:hover{
+
+.description_wrapper button:hover {
     background-color: #66bbd3;
     transition: all .6s;
     color: #000;
