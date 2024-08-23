@@ -14,6 +14,8 @@
 .Container {
   z-index: 999;
   width: 100%;
+  overflow: hidden;
+  height: 1900px;
   background-color: #000;
   color: #fff;
 }

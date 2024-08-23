@@ -36,7 +36,7 @@ function Projects() {
         };
     }, []);
     return (
-        <section className={styles.Container}>
+        <div className={styles.Container}>
             <h1>Projetos</h1>
             <div ref={projectsRef} className={`${styles.card_projects} ${styles.hidden}`}>
                 <div className={styles.highlights}>
@@ -48,7 +48,7 @@ function Projects() {
                     <AllProjects/>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

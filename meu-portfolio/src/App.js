@@ -4,6 +4,7 @@ import Header from "./Components/Layout/Header";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Contacts from "./Components/Contacts";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="contacts">
+          <Contacts />
         </section>
       </Router>
     </div>

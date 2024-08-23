@@ -50,7 +50,7 @@ export default function AllProjects() {
             </div>
             <div className={`${styles.box}`} onClick={() => handleViewDescription('calculadora')}>
                 <div className={styles.card_details}>
-                    <img src="./img-projects/calculadora.png" alt="site de agendamentos" />
+                    <img src="./img-projects/calculadora.png" alt="calculadora" />
                     <div className={styles.details}>
                         <p>Calculadora Windows</p>
                         <p><FaCss3Alt /><FaReact /><FaSass /></p>
@@ -72,6 +72,19 @@ export default function AllProjects() {
                 <div className={styles.description_wrapper}>
                     <p>20 de Maio de 2024</p>
                     <button onClick={() => handleViewDescription('x-men')}>Ver Mais</button>
+                </div>
+            </div>
+            <div className={`${styles.box}`} onClick={() => handleViewDescription('mario')}>
+                <div className={styles.card_details} >
+                    <img src="./img-projects/mario.png" alt="jogo do mario" />
+                    <div className={styles.details}>
+                        <p>Jogo do Mario</p>
+                        <p><FaCss3Alt /><FaHtml5 /><FaJsSquare /></p>
+                    </div>
+                </div>
+                <div className={styles.description_wrapper}>
+                    <p>24 de Julho de 2024</p>
+                    <button onClick={() => handleViewDescription('mario')}>Ver Mais</button>
                 </div>
             </div>
             <div className={`${styles.box}`} onClick={() => handleViewDescription('mario')}>
@@ -136,7 +149,7 @@ export default function AllProjects() {
             />
             <Description
                 isVisible={visibleDescription === 'tela-login'}
-                title='X-men character selector'
+                title='Tela de Login responsiva'
                 content='O objetivo do projeto é criar uma tela responsiva em react, e implementei a função de mostrar senha. É um projeto simples, porém usei o projeto para treinar minhas habilidades em react que comecei a estudar no final de julho, um ótimo projeto para começar a se familiarizar com a tecnologia que quer utilizar.'
                 tools='React and CSS'
                 site='https://tela-de-login-react-three.vercel.app/'

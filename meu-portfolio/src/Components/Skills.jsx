@@ -38,7 +38,7 @@ function Skills(){
 
 
     return(
-        <section  className={styles.skillsContainer}>
+        <div  className={styles.skillsContainer}>
             
                 <h1>Skills</h1>
                 <div ref={skillsRef} className={`${styles.cards} ${styles.hidden} `}>
@@ -72,7 +72,7 @@ function Skills(){
                     </div>
                 </div>
             
-       </section>
+       </div>
     )
 }
 

@@ -51,7 +51,7 @@ export default function Highlights() {
             </div>
             <div className={`${styles.box}`} onClick={() => handleViewDescription('calculadora')}>
                 <div className={styles.card_details}>
-                    <img src="./img-projects/calculadora.png" alt="site de agendamentos" />
+                    <img src="./img-projects/calculadora.png" alt="calculadora" />
                     <div className={styles.details}>
                         <p>Calculadora Windows</p>
                         <p><FaCss3Alt /><FaReact /><FaSass /></p>

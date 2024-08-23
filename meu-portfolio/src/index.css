@@ -5,12 +5,16 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+body{
+  height: 100vh;
+}
 .App {
   overflow-y: auto;
-  background-color: #000
+  background-color: #000;
+  height: 100vh;
 
 }
+
 
 ::-webkit-scrollbar {
   width: 10px;

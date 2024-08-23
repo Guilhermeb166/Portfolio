@@ -1,0 +1,36 @@
+@import url(https://db.onlinewebfonts.com/c/23c0fcab84d99da0de762de7e220a6e1?family=Europa+Regular);
+.contacts_wrapper {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts_wrapper h1 {
+  color: #fff;
+  font-family: "Europa", sans-serif;
+}
+
+.social_wrapper {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.social_control {
+  color: #66d9ed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+.social_control a {
+  text-decoration: none;
+}
+.social_control a svg {
+  color: #66d9ed;
+}
+.social_control a p {
+  color: #66d9ed;
+}/*# sourceMappingURL=Contacts.module.css.map */
