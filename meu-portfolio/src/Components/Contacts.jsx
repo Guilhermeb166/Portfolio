@@ -6,29 +6,29 @@ export default function Contacts(){
             <h1>Contatos</h1>
             <div className={styles.social_wrapper}>
                 <div className={styles.social_control}>
-                    <a href="">
-                        <FaEnvelope/>
+                    <a href="mailto:guilhermebarroso166@gmail.com" target='_blank'>
+                        <FaEnvelope className={styles.social_icon}/>
                         <p>G-Mail</p>
                         <p>guilhermebarroso166@gmail.com</p>
                     </a>
                 </div>
                 <div className={styles.social_control}>
-                    <a href="">
-                        <FaPhone/>
+                    <a href="https://wa.me/5585997407364" target='_blank'>
+                        <FaPhone className={styles.social_icon}/>
                         <p>Telefone</p>
                         <p>(85) 99740-7364</p>
                     </a>
                 </div>
                 <div className={styles.social_control}>
-                    <a href="">
-                        <FaGithub/>
+                    <a href="https://github.com/Guilhermeb166" target='_blank'>
+                        <FaGithub className={styles.social_icon}/>
                         <p>Github</p>
                         <p>@Guilhermeb166</p>
                     </a>
                 </div>
                 <div className={styles.social_control}>
-                    <a href="">
-                        <FaLinkedin/>
+                    <a href="https://www.linkedin.com/in/guilherme-barroso-98773b269/" target='_blank'>
+                        <FaLinkedin className={styles.social_icon}/>
                         <p>Linkedin</p>
                         <p>Guilherme Barroso</p>
                     </a>

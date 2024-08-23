@@ -6,22 +6,20 @@ export default function AllProjects() {
     const [visibleDescription, setVisibleDescription] = useState(null);
     const [overlay, setOverlay] = useState(false);
 
-    // Função modificada para lidar com a visibilidade da descrição
+    // Função para lidar com a visibilidade da descrição
     const handleViewDescription = (projectId) => {
-        setVisibleDescription(visibleDescription === projectId ? null : projectId);
-        setOverlay(true);
-
-        // Impede o scroll quando o overlay está visível
-        document.body.style.overflow = 'hidden';
+        if (visibleDescription === projectId) {
+            handleClose(); // Se já estiver visível, fecha a descrição
+        } else {
+            setVisibleDescription(projectId);
+            document.body.style.overflow = 'hidden'; // Impede o scroll ao abrir a descrição
+        }
     };
 
-    // Função modificada para fechar a descrição
+    // Função para fechar a descrição
     const handleClose = () => {
         setVisibleDescription(null);
-        setOverlay(false);
-
-        // Permite o scroll novamente ao fechar o overlay
-        document.body.style.overflow = 'auto'; // ou simplesmente remove a propriedade
+        document.body.style.overflow = 'auto'; // Permite o scroll novamente ao fechar a descrição
     };
 
     useEffect(() => {
@@ -61,7 +59,7 @@ export default function AllProjects() {
                     <button onClick={() => handleViewDescription('calculadora')}>Ver Mais</button>
                 </div>
             </div>
-            <div className={`${styles.box}`}  onClick={() => handleViewDescription('x-men')}>
+            <div className={`${styles.box}`} onClick={() => handleViewDescription('x-men')}>
                 <div className={styles.card_details}>
                     <img src="./img-projects/x-men.png" alt="x-men selector" />
                     <div className={styles.details}>
@@ -87,17 +85,17 @@ export default function AllProjects() {
                     <button onClick={() => handleViewDescription('mario')}>Ver Mais</button>
                 </div>
             </div>
-            <div className={`${styles.box}`} onClick={() => handleViewDescription('mario')}>
-                <div className={styles.card_details} >
-                    <img src="./img-projects/mario.png" alt="jogo do mario" />
+            <div className={`${styles.box}`} onClick={() => handleViewDescription('pokedex')}>
+                <div className={styles.card_details}>
+                    <img src="./img-projects/pokedex.png" alt="pokedex" />
                     <div className={styles.details}>
-                        <p>Jogo do Mario</p>
-                        <p><FaCss3Alt /><FaHtml5 /><FaJsSquare /></p>
+                        <p>Pokédex</p>
+                        <p><FaHtml5 /><FaCss3Alt /><FaJsSquare /></p>
                     </div>
                 </div>
                 <div className={styles.description_wrapper}>
-                    <p>24 de Julho de 2024</p>
-                    <button onClick={() => handleViewDescription('mario')}>Ver Mais</button>
+                    <p>20 de Agosto de 2024</p>
+                    <button onClick={() => handleViewDescription('pokedex')}>Ver Mais</button>
                 </div>
             </div>
             <div className={`${styles.box}`} onClick={() => handleViewDescription('tela-login')}>
@@ -127,6 +125,8 @@ export default function AllProjects() {
                 title='Calculadora Windows'
                 content='Projeto de calculadora do Windows desenvolvido com o objetivo de aperfeiçoar minhas habilidades com React adquiridas recentemente,creio que esse seja um dos principais exercícios pra praticar. Então, além de aplicar as funcionalidades e a interface da calculadora do Windows, tentei simular uma espécie de ambiente desktop, onde é possível abrir e fechar a aplicação.'
                 tools=' CSS3, React js, and Sass'
+                site='https://calculator-react-lac.vercel.app/'
+                repository='https://github.com/Guilhermeb166/Calculator-React'
                 onClose={handleClose}
             />
             <Description
@@ -145,6 +145,15 @@ export default function AllProjects() {
                 tools='HTML5, CSS3, JavaScript'
                 site='https://guilhermeb166.github.io/Jogo-do-Mario/'
                 repository='https://github.com/Guilhermeb166/Jogo-do-Mario'
+                onClose={handleClose}
+            />
+            <Description
+                isVisible={visibleDescription === 'pokedex'}
+                title='Projeto pokédex'
+                content='Um projeto com o objetivo de utilizar a API do pokemon, e fazer uma pokedex com as informações da API. Acredito que foi uma ótima experiência para eu conhecer mais sobre APIs e sobre como utilizar o fetch no javascript, um projeto simples, porém contribuiu bastante para a minha experiência com Javascript.'
+                tools=' CSS3, React js, and Sass'
+                site='https://guilhermeb166.github.io/Pokedex/'
+                repository='https://github.com/Guilhermeb166/Pokedex'
                 onClose={handleClose}
             />
             <Description

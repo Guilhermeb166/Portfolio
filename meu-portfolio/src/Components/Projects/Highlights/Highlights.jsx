@@ -7,22 +7,22 @@ export default function Highlights() {
     const [visibleDescription, setVisibleDescription] = useState(null);
     const [overlay, setOverlay] = useState(false);
 
-    // Função modificada para lidar com a visibilidade da descrição
+    // Função para lidar com a visibilidade da descrição
     const handleViewDescription = (projectId) => {
-        setVisibleDescription(visibleDescription === projectId ? null : projectId);
-        setOverlay(true);
-
-        // Impede o scroll quando o overlay está visível
-        document.body.style.overflow = 'hidden';
+        if (visibleDescription === projectId) {
+            handleClose(); // Se já estiver visível, fecha a descrição
+        } else {
+            setVisibleDescription(projectId);
+            document.body.style.overflow = 'hidden'; // Impede o scroll ao abrir a descrição
+            document.documentElement.style.overflow = 'hidden'; // Adiciona ao <html>
+        }
     };
 
-    // Função modificada para fechar a descrição
+    // Função para fechar a descrição
     const handleClose = () => {
         setVisibleDescription(null);
-        setOverlay(false);
-
-        // Permite o scroll novamente ao fechar o overlay
-        document.body.style.overflow = 'auto'; // ou simplesmente remove a propriedade
+        document.body.style.overflow = 'auto'; // Permite o scroll novamente ao fechar a descrição
+        document.documentElement.style.overflow = 'auto'; // Remove do <html>
     };
 
     useEffect(() => {
@@ -62,7 +62,20 @@ export default function Highlights() {
                     <button onClick={() => handleViewDescription('calculadora')}>Ver Mais</button>
                 </div>
             </div>
-            <div className={`${styles.box}`}></div>
+            <div className={`${styles.box}`} onClick={() => handleViewDescription('pokedex')}>
+                <div className={styles.card_details}>
+                    <img src="./img-projects/pokedex.png" alt="pokedex" />
+                    <div className={styles.details}>
+                        <p>Pokédex</p>
+                        <p><FaHtml5 /><FaCss3Alt /><FaJsSquare /></p>
+                    </div>
+                </div>
+                <div className={styles.description_wrapper}>
+                    <p>20 de Agosto de 2024</p>
+                    <button onClick={() => handleViewDescription('pokedex')}>Ver Mais</button>
+                </div>
+            </div>
+
             <Description
                 isVisible={visibleDescription === 'agendamentos'}
                 title='Sistema de agendamentos de Clientes'
@@ -77,6 +90,17 @@ export default function Highlights() {
                 title='Calculadora Windows'
                 content='Projeto de calculadora do Windows desenvolvido com o objetivo de aperfeiçoar minhas habilidades com React adquiridas recentemente,creio que esse seja um dos principais exercícios pra praticar. Então, além de aplicar as funcionalidades e a interface da calculadora do Windows, tentei simular uma espécie de ambiente desktop, onde é possível abrir e fechar a aplicação.'
                 tools=' CSS3, React js, and Sass'
+                site='https://feitosa-agendamentos.vercel.app/'
+                repository='https://github.com/Guilhermeb166/Agendamento-Clientes'
+                onClose={handleClose}
+            />
+            <Description
+                isVisible={visibleDescription === 'pokedex'}
+                title='Projeto pokédex'
+                content='Um projeto com o objetivo de utilizar a API do pokemon, e fazer uma pokedex com as informações da API. Acredito que foi uma ótima experiência para eu conhecer mais sobre APIs e sobre como utilizar o fetch no javascript, um projeto simples, porém contribuiu bastante para a minha experiência com Javascript.'
+                tools=' CSS3, React js, and Sass'
+                site='https://guilhermeb166.github.io/Pokedex/'
+                repository='https://github.com/Guilhermeb166/Pokedex'
                 onClose={handleClose}
             />
         </div>
