@@ -1,5 +1,5 @@
-import styles from "../css-modules/Header.module.css";
-import { Link } from "react-router-dom"
+import styles from "./Header.module.css";
+
 function Header() {
 
   function Download() {
@@ -24,7 +24,7 @@ function Header() {
         <div className={styles.Links}>
           <p><span onClick={() => scrollToSection('Header')}>Home</span></p>
           <p><span onClick={() => scrollToSection('projects')}>Meus Projetos</span></p>
-          <p><span onClick={() => scrollToSection('contato')}>Contato</span></p>
+          <p><span onClick={() => scrollToSection('contacts')}>Contato</span></p>
           <p><span onClick={() => scrollToSection('skills')}>Skills</span></p>
         </div>
       </nav>

@@ -2,10 +2,9 @@
 import { useState, useEffect } from 'react';
 import styles from './Highlights.module.css'
 import { FaCss3Alt, FaReact, FaSass, FaFigma, FaJsSquare, FaHtml5 } from 'react-icons/fa'
-import Description from '../Description';
+import Description from '../Description/Description';
 export default function Highlights() {
     const [visibleDescription, setVisibleDescription] = useState(null);
-    const [overlay, setOverlay] = useState(false);
 
     // Função para lidar com a visibilidade da descrição
     const handleViewDescription = (projectId) => {

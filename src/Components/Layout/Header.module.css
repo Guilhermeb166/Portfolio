@@ -9,7 +9,6 @@ header {
   height: 750px;
   width: 100%;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -67,13 +66,15 @@ nav {
   color: #fff;
   text-shadow: 1px 10px 40px rgba(0, 0, 0, 0.337254902);
   cursor: pointer;
+
+  &>h3{
+    color: #f6f6f6;
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-align: center;
+  }
 }
 .Presentation h1 {
   font-size: 80px;
   letter-spacing: 10px;
 }
-.Presentation h3 {
-  color: #f6f6f6;
-  font-size: 30px;
-  letter-spacing: 5px;
-}/*# sourceMappingURL=Header.module.css.map */

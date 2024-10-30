@@ -1,7 +1,7 @@
-import styles from './css-modules/Projects.module.css'
+import styles from './Projects.module.css'
 import { useEffect, useRef } from 'react';
-import Highlights from './Projects/Highlights/Highlights'
-import AllProjects from './Projects/All/AllProjects';
+import Highlights from './Highlights/Highlights'
+import AllProjects from './All/AllProjects';
 function Projects() {
 
     const projectsRef = useRef(null);

@@ -18,8 +18,8 @@ export default function Description({ isVisible, content, title, tools, site, re
                         <p className={styles.tools}>{tools}</p>
                     </div>
                     <div className={styles.btn_control}>
-                        <button><a href={site} target='_blank' rel='external'>Acesse o Projeto</a></button>
-                        <button><a href={repository} target='_blank' rel='external'>Repositório do Projeto</a></button>
+                        <button><a href={site} target='_blank' rel="noreferrer">Acesse o Projeto</a></button>
+                        <button><a href={repository} target='_blank' rel="noreferrer">Repositório do Projeto</a></button>
                     </div>
                 </div>
                 <div className={styles.Closebtn}>

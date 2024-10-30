@@ -1,6 +1,6 @@
 import { FaReact, FaHtml5, FaCss3Alt , FaJsSquare , FaSass,FaFigma } from "react-icons/fa";
 import { useEffect, useRef } from 'react';
-import styles from './css-modules/Skills.module.css'
+import styles from './Skills.module.css'
 function Skills(){
 
         const skillsRef = useRef(null);

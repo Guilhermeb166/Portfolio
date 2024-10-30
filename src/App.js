@@ -1,10 +1,9 @@
 
-import "./App.css";
 import Header from "./Components/Layout/Header";
-import Skills from "./Components/Skills";
-import Projects from "./Components/Projects";
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Contacts from "./Components/Contacts";
+import Skills from "./Components/Skills/Skills";
+import Projects from "./Components/Projects/Projects";
+import {BrowserRouter as Router,} from 'react-router-dom'
+import Contacts from "./Components/Contacts/Contacts";
 
 function App() {
   return (

@@ -1,10 +1,9 @@
-import Description from '../Description'
+import Description from '../Description/Description'
 import styles from './AllProjects.module.css'
 import { useState, useEffect } from 'react';
 import { FaCss3Alt, FaReact, FaSass, FaFigma, FaJsSquare, FaHtml5 } from 'react-icons/fa'
 export default function AllProjects() {
     const [visibleDescription, setVisibleDescription] = useState(null);
-    const [overlay, setOverlay] = useState(false);
 
     // Função para lidar com a visibilidade da descrição
     const handleViewDescription = (projectId) => {
