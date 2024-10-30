@@ -23,6 +23,7 @@
   font-size: 40px;
   letter-spacing: 5px;
   text-transform: uppercase;
+  text-align: center;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 70px;
@@ -63,4 +64,4 @@
 .all_projects {
   height: 500px;
   width: 90%;
-}/*# sourceMappingURL=Projects.module.css.map */
+}

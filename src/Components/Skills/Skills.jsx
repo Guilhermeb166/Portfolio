@@ -1,6 +1,9 @@
-import { FaReact, FaHtml5, FaCss3Alt , FaJsSquare , FaSass,FaFigma } from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt , FaJsSquare , FaSass,FaFigma, FaNodeJs } from "react-icons/fa";
 import { useEffect, useRef } from 'react';
 import styles from './Skills.module.css'
+import { SiTailwindcss } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { TbApi } from "react-icons/tb";
 function Skills(){
 
         const skillsRef = useRef(null);
@@ -44,29 +47,45 @@ function Skills(){
                 <div ref={skillsRef} className={`${styles.cards} ${styles.hidden} `}>
                     <div className={styles.fundo}></div>
                     <div className={styles.item}>
-                        <p>HTML5</p>
+                        <p className={styles.itemTitle}>HTML5</p>
                         <FaHtml5 className={styles.icon}/>
                         <p className={styles.barra}></p>
                     </div>
                     <div className={styles.item}>
-                       <p>CSS3</p> 
+                       <p className={styles.itemTitle}>CSS3</p> 
                        <FaCss3Alt className={styles.icon}/>
                         <p className={styles.barra}></p>
                     </div>
                     <div className={styles.item}>
-                        <p>JavaScript</p> <FaJsSquare className={styles.icon}/>
+                        <p className={styles.itemTitle}>JavaScript</p> <FaJsSquare className={styles.icon}/>
                         <p className={styles.barra}></p>
                     </div>
                     <div className={styles.item}>
-                       <p>React js</p> <FaReact className={styles.icon}/>
+                       <p className={styles.itemTitle}>React </p> <FaReact className={styles.icon}/>
                         <p className={styles.barra}></p>
                     </div>
                     <div className={styles.item}>
-                       <p>SASS</p> <FaSass className={styles.icon}/>
+                       <p className={styles.itemTitle}>SASS</p> <FaSass className={styles.icon}/>
                         <p className={styles.barra}></p>
                     </div>
                     <div className={styles.item}>
-                        <p>Figma</p>
+                       <p className={styles.itemTitle}>Node Js</p> <FaNodeJs className={styles.icon}/>
+                        <p className={styles.barra}></p>
+                    </div>
+                    <div className={styles.item}>
+                       <p className={styles.itemTitle}>Tailwind CSS</p> <SiTailwindcss className={styles.icon}/>
+                        <p className={styles.barra}></p>
+                    </div>
+                    <div className={styles.item}>
+                       <p className={styles.itemTitle}>My Sql</p> <GrMysql className={styles.icon}/>
+                        <p className={styles.barra}></p>
+                    </div>
+                    <div className={styles.item}>
+                       <p className={styles.itemTitle}>APIs</p> <TbApi className={styles.icon}/>
+                        <p className={styles.barra}></p>
+                    </div>
+                    <div className={styles.item}>
+                        <p className={styles.itemTitle}>Figma</p>
                         <FaFigma className={styles.icon}/>
                         <p className={styles.barra}></p>
                     </div>
