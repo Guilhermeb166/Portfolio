@@ -1,5 +1,5 @@
 @import url(https://db.onlinewebfonts.com/c/23c0fcab84d99da0de762de7e220a6e1?family=Europa+Regular);
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 header {
   display: flex;
   flex-direction: column;
@@ -42,24 +42,45 @@ nav {
   width: 500px;
   justify-content: space-around;
   align-items: center;
-}
-.Links p span {
-  text-decoration: none;
-  font: 500 20px "Europa Regular", sans-serif;
-  color: #ffffff;
-  text-shadow: 3px 1px 1px #000000;
-  cursor: pointer;
-  letter-spacing: 2px;
-}
-.Links p span:hover {
-  color: #66d9ed;
-  text-shadow: 1px 1px 1px rgba(2, 2, 2, 0.5960784314);
-}
-.Links p:hover {
-  transform: scale(1.25);
-  transition: 0.4s;
+
+  p{
+    position: relative;
+    padding-bottom: 1.5px;
+    &:after {
+      /*transform: scale(1.25);
+      transition: 0.4s;*/
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1.5px;
+      border-radius: 5px;
+      box-shadow: 1px 1px 4px #00000094;
+      width: 0;
+    }
+
+    &:hover:after {
+      width: 100%;
+      transition: .5s linear;
+    }
+  }
+  
+
+  span {
+    text-decoration: none;
+    font: 700 20px "Roboto", sans-serif;
+    color: #ffffff;
+    text-shadow: -2px 2px 3px #000000;
+    cursor: pointer;
+    letter-spacing: 2px;
+
+  }
 }
 
+
+
+  
 .Presentation {
   margin: auto;
   font-family: "Poppins", sans-serif;
