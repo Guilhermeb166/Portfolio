@@ -4,6 +4,7 @@ import Skills from "./Components/Skills/Skills";
 import Projects from "./Components/Projects/Projects";
 import {BrowserRouter as Router,} from 'react-router-dom'
 import Contacts from "./Components/Contacts/Contacts";
+import './index.css'
 
 function App() {
   return (

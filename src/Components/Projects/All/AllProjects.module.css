@@ -74,7 +74,7 @@
 }
 
 .details>p>svg {
-    color: #66bbd3;
+    color: var(--azulClaro);
     font-size: 1.5em;
     margin-right: 5px;
 }
@@ -100,7 +100,7 @@
 }
 
 .description_wrapper button {
-    border: 1px solid #66bbd3;
+    border: 1px solid var(--azulClaro);
     background-color: transparent;
     color: #fff;
     border-radius: 8px;
@@ -109,7 +109,7 @@
 }
 
 .description_wrapper button:hover {
-    background-color: #66bbd3;
+    background-color: var(--azulClaro);
     transition: all .6s;
     color: #000;
 }

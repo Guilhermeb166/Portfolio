@@ -50,7 +50,9 @@
   margin-top: 5px;
   border-radius: 10px;
   height: 3px;
-  background-color: #66d9ed;
+  background-color: var(--azulClaro)
+  var(--azulClaro)
+  var(--azulClaro);
 }
 
 .highlights {

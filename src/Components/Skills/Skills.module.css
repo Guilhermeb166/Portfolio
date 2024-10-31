@@ -40,7 +40,7 @@
   width: 60%;
   z-index: 999;
 }
-.skillsContainer .cards .fundo {
+.fundo {
   position: absolute;
   background: url("../../../public/img/hello-world-html-code-768x384.png") no-repeat center;
   width: 600px;
@@ -54,13 +54,14 @@
 }
 .item {
   background-color: #232323;
-  color: #66d9ed;
+  color: var(--azulClaro);
   cursor: pointer;
   display: flex;
   z-index: 999;
   padding-top: 10px;
   flex-direction: column;
   width: 100px;
+  user-select: none;
   height: 110px;
   border-top-right-radius: 20px;
   align-items: center;
@@ -69,14 +70,26 @@
 
   .icon {
     font-size: 50px;
-    color: #66d9ed;
+    color: var(--azulClaro);
     margin: 10px 0;
   }
 
   .barra {
-    background-color: #66d9ed;
+    background-color: var(--azulClaro);
     width: 100%;
     height: 3px;
     margin-top: auto;
   }
+
+  &:hover,&:hover .icon{
+    color: #00b7ff;
+    transition: all .7s ease;
+  }
+  &:hover .barra{
+    background-color: #00b7ff;
+    transition: all .5s ease;
+  }
+
 }
+
+

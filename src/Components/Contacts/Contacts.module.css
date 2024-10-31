@@ -21,7 +21,7 @@
 }
 
 .social_control {
-  color: #66d9ed;
+  color: var(--azulClaro);
 }
 .social_control > a {
   height: 100px;
@@ -37,10 +37,10 @@
 }
 .social_control > a .social_icon {
   font-size: 40px;
-  color: #66d9ed;
+  color: var(--azulClaro);
 }
 .social_control > a p {
-  color: #66d9ed;
+  color: var(--azulClaro);
   letter-spacing: 1px;
   font-family: Arial, Helvetica, sans-serif;
 }
