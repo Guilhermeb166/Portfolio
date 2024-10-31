@@ -1,6 +1,19 @@
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import styles from "./Header.module.css";
+import { useState,useEffect } from "react";
 
 function Header() {
+  const [loading,setLoading] = useState(true)
+
+  useEffect(() => {
+    // Seleciona a imagem que precisa ser carregada
+    const img = new Image();
+    img.src = '/img/workfundo.jpg';
+    img.onload = () => {
+      setLoading(false); // Define o carregamento como concluído
+    };
+  }, []);
+
 
   function Download() {
     const link = document.createElement('a')
@@ -18,6 +31,14 @@ function Header() {
   }
 
   return (
+
+    <>
+    {loading?(
+      <div className={styles.preloader}>
+        <AiOutlineLoading3Quarters className={styles.loadingIcon}/>
+      </div>
+      
+    ):(
     <header>
       <nav>
         <button id="downloadBtn" className={styles.downloadBtn} onClick={Download}>Download CV</button>
@@ -34,7 +55,8 @@ function Header() {
       </div>
 
     </header>
-
+  )}
+  </>
   );
 }
 
