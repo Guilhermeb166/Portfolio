@@ -83,10 +83,12 @@
 
   &:hover,&:hover .icon{
     color: #00b7ff;
+    transform: scale(1.05);
     transition: all .7s ease;
   }
   &:hover .barra{
     background-color: #00b7ff;
+   
     transition: all .5s ease;
   }
 
